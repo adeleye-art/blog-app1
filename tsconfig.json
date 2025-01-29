@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+    "target": "ESNext",
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -18,10 +18,17 @@
         "name": "next"
       }
     ],
+    "types": ["cypress"],  // Ensure Cypress types are included
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "cypress/**/*"  // Add Cypress tests folder
+  ],
   "exclude": ["node_modules"]
 }
